@@ -8,7 +8,20 @@
         http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd"> 
         
-       <bean  name="idea" class="com.anupama.xml.Idea"/>
-       <bean  name="voda" class="com.anupama.xml.Vodaphone"/>
+       <bean name="idea" class="com.anupama.xml.Idea"/>
+       <bean name="voda" class="com.anupama.xml.Vodaphone"/>
+       
+       <bean name="studentSet" class="com.anupama.di.literal.StudentSetterDemo">
+       		<property name="name" value="Anupama"></property>
+       </bean>
+       
+       <bean name="laxmi" class="com.anupama.di.literal.StudentSetterDemo">
+       		<property name="name" value="Laxmi K"></property>
+       </bean>
+       
+        <bean  name="constStudent" class="com.anupama.di.literal.StudentConstDemo">
+        	<constructor-arg name="id" value="1" type = "int"></constructor-arg>
+       		<constructor-arg name="nameStudent" value="Pradeep" type="java.lang.String"/>
+       </bean>
 	
 </beans>
